@@ -15,3 +15,20 @@ class GitHub():
             'https://api.github.com/search/repositories', params={'q': name})
         body = r.json()
         return body
+
+    def search_commits(self, owner, repo):
+        r = requests.get(
+            f'https://api.github.com/repos/{owner}/{repo}/commits')
+        body = r.json()
+        return body
+
+    def get_last_year_commit_activity(self, owner, repo):
+        r = requests.get(
+            f'https://api.github.com/repos/{owner}/{repo}/stats/commit_activity')
+        body = r.json()
+        return body
+
+    def check_emoji(self):
+        r = requests.get('https://api.github.com/emojis')
+        body = r.json()
+        return body

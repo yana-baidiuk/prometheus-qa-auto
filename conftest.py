@@ -7,13 +7,10 @@ class User():
         self.name = None
         self.second_name = None
 
-    def create_user(self, name, second_name):
+    def create_user(self, name, second_name, repo_name):
         self.name = name
         self.second_name = second_name
-
-    def remove_user(self):
-        self.name = ''
-        self.second_name = ''
+        self.repo_name = repo_name
 
 
 @pytest.fixture
