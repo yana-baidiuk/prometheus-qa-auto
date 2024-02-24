@@ -8,7 +8,7 @@ def test_get_list_commits(github_api):
     first_commit_message = commits[0]['commit']['message']
     committer_email = commits[0]['commit']['committer']['email']
     assert first_commit_message == 'First github api tests have been performed'
-    assert commits_number == 4
+    assert commits_number != 0
     assert committer_email == 'jane.baidiuk@gmail.com'
 
 

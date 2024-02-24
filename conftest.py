@@ -1,4 +1,5 @@
 import pytest
+import sqlite3 as sql
 from modules.api.clients.github import GitHub
 
 
